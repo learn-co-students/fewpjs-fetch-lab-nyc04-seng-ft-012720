@@ -1,5 +1,7 @@
 function fetchBooks() {
-
+  return fetch("https://anapioficeandfire.com/api/books") //fetch from an api
+  .then(resp => resp.json())//get the json repsonse
+  .then(json => renderBooks(json))//pass the json as an argument in the funciton to render the data
 }
 
 function renderBooks(json) {
